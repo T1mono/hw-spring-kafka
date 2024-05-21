@@ -26,7 +26,7 @@ public class KafkaHealthMetricProducerController {
 
 
     @PostMapping("/send-metric")
-    public String sendMetric() {
+    public void sendMetric() {
         String healthMetric = restTemplate.getForObject("http://localhost:8080/actuator/health", String.class);
         kafkaProducerService.sendMessage(healthMetric);
 
@@ -34,6 +34,6 @@ public class KafkaHealthMetricProducerController {
         metric.setMetric(healthMetric);
         healthMetricService.createHealthMetric(metric);
 
-        return "Health metric sent!";
+        log.info("Health metric sent in kafka");
     }
 }
