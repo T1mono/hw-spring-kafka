@@ -9,5 +9,4 @@ public class HwMetricsConsumerApplication {
     public static void main(String[] args) {
         SpringApplication.run(HwMetricsConsumerApplication.class, args);
     }
-
 }

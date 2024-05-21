@@ -33,7 +33,7 @@ URL с swagger документацией для hw-metrics-consumer: http://loc
 ## Запуск контейнера Kafka и Zookeeper
 
 ```bash
-cd hw-spring-kafka && docker-compose up
+cd hw-metrics-producer && docker-compose up
 ```
 
 ## Запуск браузера с отключённым CORS
